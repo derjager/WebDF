@@ -35,3 +35,8 @@ Once finished, this script will create the following folders and files:
 - Database <spoof_date>.db this is a sqlite database that stores all the responses for each request por spoof and original domain, images, case info and results for comparisons.
 - Logs <domain_date>.json all the information collected using scrapy for each domain crawled.
 - file <spoof domain>.txt, contains information fo images that, once compared, had a treshold lower than 500, it means these images have the same content.
+  
+  
+  Export sqlite tables to csv:
+  
+  sqlite3 -header -csv <database>.db "select * from requests;" > requests.csv
