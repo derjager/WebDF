@@ -18,13 +18,13 @@ Requeriments:
 
 usage:
 
-  python WebDF.py -s <spoof domain> -u <file with urls to analyze> 
+    python WebDF.py -s <spoof domain> -u <file with urls to analyze> 
 
 if you want to compare two domains use:
 
-  python WebDF.py -s <spoof domain> -u <file with urls to analyze> --compare
+    python WebDF.py -s <spoof domain> -u <file with urls to analyze> --compare
   
-  once you start the script it will ask for the original domain to compare and a file with the urls to crawl in the original domain.
+once you start the script it will ask for the original domain to compare and a file with the urls to crawl in the original domain.
 
 Results:
 
@@ -37,6 +37,6 @@ Once finished, this script will create the following folders and files:
 - file <spoof domain>.txt, contains information fo images that, once compared, had a treshold lower than 500, it means these images have the same content.
   
   
-  Export sqlite tables to csv:
+To export sqlite tables to csv:
   
-  sqlite3 -header -csv <database>.db "select * from requests;" > requests.csv
+    sqlite3 -header -csv <database>.db "select * from requests;" > requests.csv
